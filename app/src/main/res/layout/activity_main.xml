@@ -13,8 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </FrameLayout>
+        android:layout_height="wrap_content"/>
 
     <FrameLayout
         android:layout_margin="15dp"
@@ -28,16 +27,46 @@
         android:foregroundGravity="center"/>
 
     <EditText
+        android:id="@+id/color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/add_color"/>
+
+    <Button
+        android:text="ADD"
+        android:id="@+id/add_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/reset"
+        app:layout_constraintBottom_toTopOf="@id/write"
+        android:focusable="true"
+        android:onClick="addColorOnClick"/>
+
+    <Button
+        android:text="RESET"
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_add"
+        app:layout_constraintStart_toEndOf="@id/add_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/write"
+        android:focusable="true"
+        android:onClick="resetProgressFile"/>
+
+    <EditText
         android:id="@+id/write"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frame"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
-
-    </EditText>
+        app:layout_constraintBottom_toTopOf="@id/switch1" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switch1"
@@ -46,6 +75,6 @@
         android:text="Write"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/write" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
