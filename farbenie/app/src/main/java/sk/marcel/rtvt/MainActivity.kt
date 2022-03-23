@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.switchmaterial.SwitchMaterial
 import org.json.JSONObject
 
-
 class MainActivity : AppCompatActivity() {
 
     private var mNfcAdapter: NfcAdapter? = null
