@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
         grid.layoutParams = ViewGroup.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
 
         val dim = minOf(
-            (Resources.getSystem().displayMetrics.widthPixels)/grid.columnCount,
-            Resources.getSystem().displayMetrics.widthPixels/ grid.rowCount
+            Resources.getSystem().displayMetrics.widthPixels / grid.columnCount,
+            Resources.getSystem().displayMetrics.widthPixels / grid.rowCount
         )
 
         for(i in 0 until grid.rowCount)

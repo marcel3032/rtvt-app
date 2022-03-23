@@ -11,7 +11,7 @@ class JsonsHelpers(private var activity: MainActivity) {
     init {
         if(!progressFile.exists()) {
             progressFile.createNewFile()
-            progressFile.writeText("[[]]")
+            resetProgressFile()
         }
     }
 
