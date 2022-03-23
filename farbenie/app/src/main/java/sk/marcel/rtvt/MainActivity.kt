@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                     jsonToWrite.put("picture-number", jsonsHelpers.getProgressNum())
                     jsonToWrite.put("team", jsonsHelpers.getTeamName())
                     if(NFC.write(jsonToWrite.toString(), intent)){
-                        Toast.makeText(this, "Data written ${findViewById<EditText>(R.id.write).text}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Data written", Toast.LENGTH_SHORT).show()
                         jsonsHelpers.startNewPicture()
                         reading = true
                         createPixels()
