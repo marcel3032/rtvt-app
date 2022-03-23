@@ -15,6 +15,18 @@ class JsonsHelpers(private var activity: MainActivity) {
         }
     }
 
+    fun isAlreadySolved(picture: JSONObject): Boolean {
+        val results = getResultsJson()
+        for(i in 0 until results.length()){
+            if(results.getJSONObject(i).getString("team")==picture.getString("team")){
+                if(results.getJSONObject(i).getString("picture-number")==picture.getString("picture-number")){
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
     fun addSolvedPicture(picture: JSONObject){
         val resultsJson = getResultsJson()
         resultsJson.put(picture)

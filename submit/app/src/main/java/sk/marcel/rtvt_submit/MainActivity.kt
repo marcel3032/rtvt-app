@@ -54,15 +54,27 @@ class MainActivity : AppCompatActivity() {
         frameLayout.addView(grid)
     }
 
+    private fun reset(){
+        findViewById<FrameLayout>(R.id.frame).removeAllViews()
+        findViewById<TextView>(R.id.submit_text_view).text=""
+    }
+
     fun resetResultsFile(v: View){
         val builder = AlertDialog.Builder(this)
         builder.setMessage("Reset?")
             .setPositiveButton("Yes") { _: DialogInterface?, _: Int ->
                 jsonsHelpers.resetResultsFile()
+                reset()
             }
             .setNegativeButton("No") { dialog: DialogInterface, _: Int -> dialog.cancel() }
         val alert = builder.create()
         alert.show()
+    }
+
+    fun displayLastPicture(){
+        val results = jsonsHelpers.getResultsJson()
+        if(results.length()>0)
+            createPixels(results.getJSONObject(results.length()-1).getInt("picture-number"))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,6 +82,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this)
         jsonsHelpers = JsonsHelpers(this)
+        displayLastPicture()
     }
 
     override fun onResume() {
@@ -87,11 +100,16 @@ class MainActivity : AppCompatActivity() {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
                 val res = NFC.read(intent)
                 if(res!=null) {
-                    Toast.makeText(this, "on card: $res", Toast.LENGTH_SHORT).show()
                     val solvedPicture = JSONObject(res)
+                    if(jsonsHelpers.isAlreadySolved(solvedPicture)){
+                        Toast.makeText(this, "Already submitted picture", Toast.LENGTH_SHORT).show()
+                        return
+                    }
+
                     createPixels(solvedPicture.getInt("picture-number"))
                     solvedPicture.put("datetime", Calendar.getInstance().time.toGMTString())
                     jsonsHelpers.addSolvedPicture(solvedPicture)
+                    findViewById<TextView>(R.id.submit_text_view).text = solvedPicture.toString(2)
                 }
                 else
                     Toast.makeText(this, "reading failed", Toast.LENGTH_SHORT).show()

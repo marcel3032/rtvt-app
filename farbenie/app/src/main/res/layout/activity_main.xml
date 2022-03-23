@@ -53,10 +53,22 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         app:layout_constraintStart_toEndOf="@id/add_color"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/set_team_name"
         app:layout_constraintBottom_toTopOf="@id/write"
         android:focusable="true"
         android:onClick="resetProgressFile"/>
+
+    <Button
+        android:text="TEAM NAME"
+        android:id="@+id/set_team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@id/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/write"
+        android:focusable="true"
+        android:onClick="setTeamName"/>
 
     <EditText
         android:id="@+id/write"

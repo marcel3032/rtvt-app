@@ -1,5 +1,6 @@
 package sk.marcel.rtvt
 
+import android.view.View
 import org.json.JSONArray
 import java.io.BufferedReader
 import java.io.File
@@ -7,11 +8,16 @@ import java.lang.Exception
 
 class JsonsHelpers(private var activity: MainActivity) {
     var progressFile: File = File(activity.filesDir.absolutePath, "progress.json")
+    var teamFile: File = File(activity.filesDir.absolutePath, "team.txt")
 
     init {
         if(!progressFile.exists()) {
             progressFile.createNewFile()
             resetProgressFile()
+        }
+        if(!teamFile.exists()) {
+            teamFile.createNewFile()
+            activity.setTeamName(View(activity))
         }
     }
 
@@ -55,6 +61,16 @@ class JsonsHelpers(private var activity: MainActivity) {
     fun getPicturesJson(i:Int): JSONArray? {
         BufferedReader(activity.assets.open("pictures.json").reader()).use { reader ->
             return JSONArray(reader.readText()).getJSONArray(i)
+        }
+    }
+
+    fun setTeamName(name:String){
+        teamFile.writeText(name)
+    }
+
+    fun getTeamName(): String {
+        BufferedReader(teamFile.reader()).use { reader ->
+            return reader.readText()
         }
     }
 }

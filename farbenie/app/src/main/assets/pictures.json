@@ -3,18 +3,18 @@
     [
 	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
 	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
-	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": false},
-	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true}
-	],
-	[
-	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
-	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": false},
 	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
 	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true}
 	],
 	[
 	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
-	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": false},
+	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
+	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
+	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true}
+	],
+	[
+	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
+	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
 	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
 	  {"need_color": "orange", "display_color": "#fc7f03", "precolored": true}
 	],

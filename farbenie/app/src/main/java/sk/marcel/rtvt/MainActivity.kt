@@ -7,13 +7,13 @@ import android.graphics.Color
 import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.text.SpannableStringBuilder
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.switchmaterial.SwitchMaterial
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private var mNfcAdapter: NfcAdapter? = null
     private var needColors = HashMap<Pair<Int, Int>, String>()
     private lateinit var jsonsHelpers: JsonsHelpers
+    private var reading = true
 
     private fun displayNeededColors(){
         findViewById<FrameLayout>(R.id.need_colors).removeAllViews()
@@ -89,14 +90,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if(needColors.isEmpty()){
-            newPicture()
+            writeSubmitNFC()
         }
         createPixels()
         displayNeededColors()
     }
 
-    fun newPicture(){
-        jsonsHelpers.startNewPicture()
+    fun writeSubmitNFC(){
+        reading = false
     }
 
     fun resetProgressFile(v: View){
@@ -108,6 +109,21 @@ class MainActivity : AppCompatActivity() {
                 displayNeededColors()
             }
             .setNegativeButton("No") { dialog: DialogInterface, _: Int -> dialog.cancel() }
+        val alert = builder.create()
+        alert.show()
+    }
+
+    fun setTeamName(v: View){
+        val builder = AlertDialog.Builder(this)
+        val editText = EditText(this)
+        editText.id = View.generateViewId()
+        editText.text = SpannableStringBuilder(jsonsHelpers.getTeamName())
+        builder.setMessage("Set team name?")
+            .setPositiveButton("Save") { _: DialogInterface?, _: Int ->
+                jsonsHelpers.setTeamName(editText.text.toString())
+            }
+            .setView(editText)
+            .setNegativeButton("Cancel") { dialog: DialogInterface, _: Int -> dialog.cancel() }
         val alert = builder.create()
         alert.show()
     }
@@ -134,17 +150,25 @@ class MainActivity : AppCompatActivity() {
 
         if(intent!=null) {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
-                if(findViewById<SwitchMaterial>(R.id.switch1).isChecked) {
-                    if(NFC.write(findViewById<EditText>(R.id.write).text.toString(), intent))
-                        Toast.makeText(this, "written: ${findViewById<EditText>(R.id.write).text}", Toast.LENGTH_SHORT).show()
-                    else
-                        Toast.makeText(this, "write failed", Toast.LENGTH_SHORT).show()
-                } else {
+                if(reading) {
                     val res = NFC.read(intent)
                     if(res!=null)
                         Toast.makeText(this, "on card: $res", Toast.LENGTH_SHORT).show()
                     else
                         Toast.makeText(this, "reading failed", Toast.LENGTH_SHORT).show()
+                } else {
+                    val jsonToWrite = JSONObject()
+                    jsonToWrite.put("picture-number", jsonsHelpers.getProgressNum())
+                    jsonToWrite.put("team", jsonsHelpers.getTeamName())
+                    if(NFC.write(jsonToWrite.toString(), intent)){
+                        Toast.makeText(this, "written: ${findViewById<EditText>(R.id.write).text}", Toast.LENGTH_SHORT).show()
+                        jsonsHelpers.startNewPicture()
+                        reading = true
+                        createPixels()
+                        displayNeededColors()
+                    }
+                    else
+                        Toast.makeText(this, "write failed", Toast.LENGTH_SHORT).show()
                 }
             }
         }
