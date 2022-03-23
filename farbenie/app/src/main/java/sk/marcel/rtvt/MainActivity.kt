@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
+import android.graphics.Typeface
 import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.text.SpannableStringBuilder
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayNeededColors(){
         findViewById<FrameLayout>(R.id.need_colors).removeAllViews()
+        if(needColors.isEmpty()){
+            writeSubmitNFC()
+            return
+        }
         val grid = GridLayout(this)
         grid.columnCount = 3
         grid.layoutParams = ViewGroup.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
@@ -89,15 +94,21 @@ class MainActivity : AppCompatActivity() {
                 break
             }
         }
+        createPixels()
+        displayNeededColors()
+
         if(needColors.isEmpty()){
             writeSubmitNFC()
         }
-        createPixels()
-        displayNeededColors()
     }
 
     fun writeSubmitNFC(){
         reading = false
+        val textView = TextView(this)
+        textView.text = "Picture finished, please submit it"
+        textView.textSize = 35f
+        textView.setTypeface(textView.typeface, Typeface.BOLD)
+        findViewById<FrameLayout>(R.id.need_colors).addView(textView)
     }
 
     fun resetProgressFile(v: View){
@@ -161,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                     jsonToWrite.put("picture-number", jsonsHelpers.getProgressNum())
                     jsonToWrite.put("team", jsonsHelpers.getTeamName())
                     if(NFC.write(jsonToWrite.toString(), intent)){
-                        Toast.makeText(this, "written: ${findViewById<EditText>(R.id.write).text}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Data written ${findViewById<EditText>(R.id.write).text}", Toast.LENGTH_SHORT).show()
                         jsonsHelpers.startNewPicture()
                         reading = true
                         createPixels()
