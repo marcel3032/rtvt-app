@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">rtvt - submit</string>
+    <string name="last_submit">Last submit:</string>
 </resources>

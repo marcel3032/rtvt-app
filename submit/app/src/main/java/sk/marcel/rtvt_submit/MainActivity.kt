@@ -4,9 +4,11 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
+import android.graphics.Typeface
 import android.nfc.NfcAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -43,8 +45,8 @@ class MainActivity : AppCompatActivity() {
         )
 
         val dim = minOf(
-            Resources.getSystem().displayMetrics.widthPixels / grid.columnCount,
-            Resources.getSystem().displayMetrics.widthPixels / grid.rowCount
+            (Resources.getSystem().displayMetrics.widthPixels-100) / grid.columnCount,
+            (Resources.getSystem().displayMetrics.heightPixels-100) / grid.rowCount
         )
 
         for(i in 0 until grid.rowCount)
@@ -71,10 +73,37 @@ class MainActivity : AppCompatActivity() {
         alert.show()
     }
 
-    fun displayLastPicture(){
+    private fun displayLastPicture(){
         val results = jsonsHelpers.getResultsJson()
-        if(results.length()>0)
-            createPixels(results.getJSONObject(results.length()-1).getInt("picture-number"))
+        if(results.length()>0) {
+            createPixels(results.getJSONObject(results.length() - 1).getInt(Constants.pictureNumber))
+            val lastPicture = results.getJSONObject(results.length() - 1)
+            findViewById<TextView>(R.id.submit_text_view).text = "picture: ${lastPicture.getString(Constants.pictureNumber)}\nteam: ${lastPicture.getString("team")}\ntime: ${lastPicture.getString("datetime")}"
+        }
+        displayProgresses()
+    }
+
+    fun displayProgresses(){
+        val progressesView = findViewById<LinearLayout>(R.id.progress_bars)
+        progressesView.removeAllViews()
+        val teamProgresses = HashMap<String, Int>()
+        val resultsJson = jsonsHelpers.getResultsJson()
+        for(i in 0 until resultsJson.length()){
+            val teamName = resultsJson.getJSONObject(i).getString("team")
+            if(! teamProgresses.containsKey(teamName)){
+                teamProgresses[teamName] = 0
+            }
+            teamProgresses[teamName] = teamProgresses[teamName]!! + 1
+        }
+        for(team in teamProgresses.keys){
+            val progress = layoutInflater.inflate(R.layout.team_progress, progressesView, false)
+            val textView = progress.findViewById<TextView>(R.id.team_name)
+            textView.text = team
+            textView.textSize = 20f
+            textView.setTypeface(textView.typeface, Typeface.BOLD)
+            progress.findViewById<ProgressBar>(R.id.team_progress).progress = 100 * teamProgresses[team]!! /jsonsHelpers.getPicturesNum()
+            progressesView.addView(progress)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -106,10 +135,9 @@ class MainActivity : AppCompatActivity() {
                         return
                     }
 
-                    createPixels(solvedPicture.getInt("picture-number"))
                     solvedPicture.put("datetime", Calendar.getInstance().time.toGMTString())
                     jsonsHelpers.addSolvedPicture(solvedPicture)
-                    findViewById<TextView>(R.id.submit_text_view).text = solvedPicture.toString(2)
+                    displayLastPicture()
                 }
                 else
                     Toast.makeText(this, "reading failed", Toast.LENGTH_SHORT).show()

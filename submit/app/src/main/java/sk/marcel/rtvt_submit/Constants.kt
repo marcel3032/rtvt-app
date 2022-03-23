@@ -4,6 +4,9 @@ object Constants {
     const val precolored = "precolored"
     const val displayColor = "display_color"
     const val needColor = "need_color"
+    const val pictureNumber = "picture-number"
+    const val team = "team"
+    const val datetime = "datetime"
     const val alpha = "#22"
     val colorsMap = mapOf(
         Pair("red", "#ff0000"),

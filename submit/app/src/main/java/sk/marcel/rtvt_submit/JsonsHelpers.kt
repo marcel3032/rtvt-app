@@ -43,6 +43,12 @@ class JsonsHelpers(private var activity: MainActivity) {
         }
     }
 
+    fun getPicturesNum(): Int{
+        BufferedReader(activity.assets.open("pictures.json").reader()).use { reader ->
+            return JSONArray(reader.readText()).length()
+        }
+    }
+
     fun getPicturesJson(i:Int): JSONArray? {
         BufferedReader(activity.assets.open("pictures.json").reader()).use { reader ->
             return JSONArray(reader.readText()).getJSONArray(i)
