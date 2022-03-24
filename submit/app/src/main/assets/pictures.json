@@ -1,56 +1,7426 @@
 [
-	[
-		[
-			{"need_color": "orange", "display_color": "#fc7a03", "precolored": true},
-			{"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
-			{"need_color": "orange", "display_color": "#fc7003", "precolored": true},
-			{"need_color": "orange", "display_color": "#fc7f03", "precolored": true}
-		],
-		[
-			{"need_color": "orange", "display_color": "#fc7903", "precolored": true},
-			{"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
-			{"need_color": "orange", "display_color": "#ac7f03", "precolored": true},
-			{"need_color": "orange", "display_color": "#f07f03", "precolored": true}
-		],
-		[
-			{"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
-			{"need_color": "orange", "display_color": "#1c7f03", "precolored": true},
-			{"need_color": "orange", "display_color": "#fc7f03", "precolored": true},
-			{"need_color": "orange", "display_color": "#fc7f03", "precolored": true}
-		],
-		[
-			{"need_color": "orange", "display_color": "#8c7f03", "precolored": true},
-			{"need_color": "orange", "display_color": "#f46f03", "precolored": false},
-			{"need_color": "orange", "display_color": "#fc7fff", "precolored": true},
-			{"need_color": "orange", "display_color": "#fcff03", "precolored": true}
-		]
-	],
-
-	[
-		[
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true}
-		],
-		[
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true}
-		],
-		[
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": false},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true}
-		],
-		[
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true},
-			{"need_color": "blue", "display_color": "#0317fc", "precolored": true}
-		]
-	]
-
+  [
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f59de8",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f59de8",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#181818",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#181818",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#edc673",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#edc673",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#edc673",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#edc673",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#957228",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "yellow",
+        "display_color": "#ffff00",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#085701",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#085701",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#085701",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#085701",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#085701",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#e67f02",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#804d00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#63738a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0000ff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#a3002e",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#41a300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f3f300",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#181818",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#181818",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#642800",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#edc673",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#edc673",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#c2b083",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff0000",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00a6ff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00a6ff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00a6ff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00a6ff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#824a00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#824a00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#824a00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#824a00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "purple",
+        "display_color": "#8d0aff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#824a00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#824a00",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f8d8ae",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f8d8ae",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f8d8ae",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f8d8ae",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f8d8ae",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f8d8ae",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff9100",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f58ef5",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#f58ef5",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#057008",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#62332a",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#62332a",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#62332a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0029a3",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#057008",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#81f485",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#057008",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#62332a",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#62332a",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#62332a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#81f485",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#057008",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "light green",
+        "display_color": "#81f485",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#00ddff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffa6f9",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "magenta",
+        "display_color": "#ff00a2",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#0e4200",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "cyan",
+        "display_color": "#0bdecc",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ea9400",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#2fa500",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#853100",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f2ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "orange",
+        "display_color": "#ff7b00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#00ff00",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "green",
+        "display_color": "#32b909",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#196402",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "brown",
+        "display_color": "#854a0b",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      },
+      {
+        "need_color": "azure",
+        "display_color": "#628bc4",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      },
+      {
+        "need_color": "yellow",
+        "display_color": "#f6ff00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      },
+      {
+        "need_color": "white",
+        "display_color": "#ffffff",
+        "precolored": true
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "black",
+        "display_color": "#000000",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "red",
+        "display_color": "#ff002a",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ],
+    [
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "dark green",
+        "display_color": "#094e00",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      },
+      {
+        "need_color": "blue",
+        "display_color": "#0013e5",
+        "precolored": true
+      }
+    ]
+  ]
 ]
