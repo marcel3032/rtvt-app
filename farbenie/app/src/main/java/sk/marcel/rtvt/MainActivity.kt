@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             pixelView.setBackgroundColor(Color.parseColor(pixel.getString(Constants.displayColor)))
         else{
             needColors[Pair(i,j)] = pixel.getString(Constants.needColor)
-            pixelView.setBackgroundColor(Color.parseColor(Constants.alpha+(pixel.getString(Constants.displayColor)).substring(1)))
+            pixelView.setImageDrawable(getDrawable(R.drawable.nothing))
         }
         return pixelView
     }
@@ -107,6 +107,7 @@ class MainActivity : AppCompatActivity() {
         val textView = TextView(this)
         textView.text = "Picture finished, please submit it"
         textView.textSize = 35f
+        textView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
         textView.setTypeface(textView.typeface, Typeface.BOLD)
         findViewById<FrameLayout>(R.id.need_colors).addView(textView)
     }
