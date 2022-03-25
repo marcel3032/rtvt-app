@@ -17,7 +17,6 @@ class JsonsHelpers(private var activity: MainActivity) {
         }
         if(!teamFile.exists()) {
             teamFile.createNewFile()
-            activity.setTeamName(View(activity))
         }
     }
 

@@ -76,6 +76,8 @@ class MainActivity : AppCompatActivity() {
                 grid.addView(makePixelView(dim, json.getJSONArray(i).getJSONObject(j), i, j))
 
         frameLayout.addView(grid)
+
+        findViewById<TextView>(R.id.team_name).text = jsonsHelpers.getTeamName()
     }
 
     fun addColorOnClick(v: View){
@@ -133,6 +135,7 @@ class MainActivity : AppCompatActivity() {
         builder.setMessage("Set team name?")
             .setPositiveButton("Save") { _: DialogInterface?, _: Int ->
                 jsonsHelpers.setTeamName(editText.text.toString())
+                createPixels()
             }
             .setView(editText)
             .setNegativeButton("Cancel") { dialog: DialogInterface, _: Int -> dialog.cancel() }
