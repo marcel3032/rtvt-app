@@ -8,11 +8,15 @@ import android.nfc.NdefMessage
 import android.nfc.NdefRecord
 import android.nfc.NfcAdapter
 import android.nfc.Tag
+import android.nfc.tech.MifareClassic
 import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
+import android.util.Log
 import java.io.IOException
 
 object NFC {
+    private val key: ByteArray = MifareClassic.KEY_DEFAULT
+
     fun write(payload: String, intent: Intent) : Boolean {
         val nfcRecord = NdefRecord(NdefRecord.TNF_WELL_KNOWN, NdefRecord.RTD_TEXT, ByteArray(0), payload.toByteArray())
         val nfcMessage = NdefMessage(arrayOf(nfcRecord))
@@ -20,11 +24,24 @@ object NFC {
         return  writeMessageToTag(nfcMessage, tag)
     }
 
-    fun read(intent: Intent):String? {
+    fun read(intent: Intent):Pair<String, Int>? {
         if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
-            intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES)?.also { rawMessages ->
-                val messages: List<NdefMessage> = rawMessages.map { it as NdefMessage }
-                return String(messages[0].records[0].payload)
+            val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
+            val team: String
+            val picture: Int
+            try {
+                mfc.connect()
+                val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(8), key)
+                if (auth) {
+                    team = String(mfc.readBlock(8))
+                    picture = mfc.readBlock(9)[0].toInt()
+                    return Pair(team, picture)
+                } else {
+                    Log.e("pokus", "Cannot authentificate")
+                }
+                mfc.close()
+            } catch (e: IOException) {
+                Log.e("pokus", e.localizedMessage)
             }
         }
         return null

@@ -129,14 +129,16 @@ class MainActivity : AppCompatActivity() {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
                 val res = NFC.read(intent)
                 if(res!=null) {
-                    val solvedPicture = JSONObject(res)
-                    if(jsonsHelpers.isAlreadySolved(solvedPicture)){
+                    val jsonRes = JSONObject()
+                    jsonRes.put(Constants.team, res.first)
+                    jsonRes.put(Constants.pictureNumber, res.second)
+                    if(jsonsHelpers.isAlreadySolved(jsonRes)){
                         Toast.makeText(this, "Already submitted picture", Toast.LENGTH_SHORT).show()
                         return
                     }
 
-                    solvedPicture.put("datetime", Calendar.getInstance().time.toGMTString())
-                    jsonsHelpers.addSolvedPicture(solvedPicture)
+                    jsonRes.put("datetime", Calendar.getInstance().time.toGMTString())
+                    jsonsHelpers.addSolvedPicture(jsonRes)
                     displayLastPicture()
                 }
                 else

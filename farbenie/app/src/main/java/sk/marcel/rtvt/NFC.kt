@@ -5,19 +5,36 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.content.IntentFilter
 import android.nfc.NdefMessage
-import android.nfc.NdefRecord
 import android.nfc.NfcAdapter
 import android.nfc.Tag
+import android.nfc.tech.MifareClassic
 import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
+import android.util.Log
 import java.io.IOException
 
 object NFC {
-    fun write(payload: String, intent: Intent) : Boolean {
-        val nfcRecord = NdefRecord(NdefRecord.TNF_WELL_KNOWN, NdefRecord.RTD_TEXT, ByteArray(0), payload.toByteArray())
-        val nfcMessage = NdefMessage(arrayOf(nfcRecord))
-        val tag = intent.getParcelableExtra<Tag>(NfcAdapter.EXTRA_TAG)
-        return  writeMessageToTag(nfcMessage, tag)
+    private val key: ByteArray = MifareClassic.KEY_DEFAULT
+
+    fun writePictureResult(team: String, picture: Int, intent: Intent) : Boolean {
+        val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
+        mfc.connect()
+        if(mfc.authenticateSectorWithKeyB(2, key)){
+            val bWriteTeam = ByteArray(16)
+            val teamNameByteArray: ByteArray = team.substring(0, 16).toByteArray()
+            System.arraycopy(teamNameByteArray, 0, bWriteTeam, 0, 16)
+            mfc.writeBlock(8, bWriteTeam)
+            val bWritePicture = ByteArray(16)
+            val pictureNumerByteArray = byteArrayOf(picture.toByte())
+            System.arraycopy(pictureNumerByteArray, 0, bWritePicture, 0, pictureNumerByteArray.size)
+            mfc.writeBlock(9, bWritePicture)
+            mfc.close()
+        } else {
+            Log.e("pokus", "Cannot authentificate")
+            mfc.close()
+            return false
+        }
+        return true
     }
 
     fun read(intent: Intent):String? {

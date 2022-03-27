@@ -172,10 +172,7 @@ class MainActivity : AppCompatActivity() {
                     else
                         Toast.makeText(this, "reading failed", Toast.LENGTH_SHORT).show()
                 } else {
-                    val jsonToWrite = JSONObject()
-                    jsonToWrite.put("picture-number", jsonsHelpers.getProgressNum())
-                    jsonToWrite.put("team", jsonsHelpers.getTeamName())
-                    if(NFC.write(jsonToWrite.toString(), intent)){
+                    if(NFC.writePictureResult(jsonsHelpers.getTeamName(), jsonsHelpers.getProgressNum(), intent)){
                         Toast.makeText(this, "Data written", Toast.LENGTH_SHORT).show()
                         jsonsHelpers.startNewPicture()
                         reading = true
