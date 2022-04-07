@@ -14,21 +14,21 @@
         android:gravity="center">
 
         <Button
-            android:layout_margin="15dp"
+            android:layout_marginHorizontal="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="share"
             android:text="Share"/>
 
         <Button
-            android:layout_margin="15dp"
+            android:layout_marginHorizontal="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="reset"
             android:text="Reset"/>
 
         <Button
-            android:layout_margin="15dp"
+            android:layout_marginHorizontal="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="newActivity"
