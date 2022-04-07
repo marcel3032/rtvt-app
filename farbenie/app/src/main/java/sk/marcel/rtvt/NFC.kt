@@ -38,6 +38,7 @@ object NFC {
     }
 
     fun read(intent: Intent):String? {
+        // TODO reading based on Krtko's format
         if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
             intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES)?.also { rawMessages ->
                 val messages: List<NdefMessage> = rawMessages.map { it as NdefMessage }
@@ -59,37 +60,5 @@ object NFC {
         val techLists = arrayOf(arrayOf(Ndef::class.java.name), arrayOf(NdefFormatable::class.java.name))
 
         nfcAdapter.enableForegroundDispatch(activity, pendingIntent, filters, techLists)
-    }
-
-    private fun writeMessageToBasicTag(nfcMessage: NdefMessage, tag: Ndef?): Boolean {
-        tag?.let {
-            it.connect()
-
-            if (nfcMessage.toByteArray().size < it.maxSize && it.isWritable) {
-                it.writeNdefMessage(nfcMessage)
-                it.close()
-                return true
-            }
-        }
-        return false
-    }
-
-    private fun writeMessageToFormatableTag(nfcMessage: NdefMessage, tag: NdefFormatable?):Boolean{
-        tag?.let {
-            try {
-                it.connect()
-                it.format(nfcMessage)
-                it.close()
-                return true
-            } catch (e: IOException) {}
-        }
-        return false
-    }
-
-    private fun writeMessageToTag(nfcMessage: NdefMessage, tag: Tag?): Boolean {
-        try {
-            return writeMessageToBasicTag(nfcMessage, Ndef.get(tag)) || writeMessageToFormatableTag(nfcMessage, NdefFormatable.get(tag))
-        } catch (e: Exception) {}
-        return false
     }
 }

@@ -1,43 +1,43 @@
-package sk.marcel.rtvt_submit
+package sk.marcel.rtvtAttendance
 
 import android.app.Activity
 import android.app.PendingIntent
 import android.content.Intent
 import android.content.IntentFilter
-import android.nfc.NdefMessage
-import android.nfc.NdefRecord
 import android.nfc.NfcAdapter
 import android.nfc.Tag
 import android.nfc.tech.MifareClassic
 import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
-import android.util.Log
-import java.io.IOException
 
 object NFC {
     private val key: ByteArray = MifareClassic.KEY_DEFAULT
 
-    fun read(intent: Intent):Pair<String, Int>? {
+    fun readId(intent: Intent):String? {
         if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
-            val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
-            val team: String
-            val picture: Int
-            try {
-                mfc.connect()
-                val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(8), key)
-                if (auth) {
-                    team = String(mfc.readBlock(8))
-                    picture = mfc.readBlock(9)[0].toInt()
-                    return Pair(team, picture)
-                } else {
-                    Log.e("pokus", "Cannot authentificate")
-                }
-                mfc.close()
-            } catch (e: IOException) {
-                Log.e("pokus", e.localizedMessage)
+            val myTag: Tag? = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG) as Tag?
+            if (myTag != null) {
+                return byteArrayToHexString(myTag.id)
             }
         }
         return null
+    }
+
+    private fun byteArrayToHexString(inarray: ByteArray): String {
+        var i: Int
+        var `in`: Int
+        val hex = arrayOf("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A","B", "C", "D", "E", "F")
+        var out = ""
+        var j: Int = 0
+        while (j < inarray.size) {
+            `in` = inarray[j].toInt() and 0xff
+            i = `in` shr 4 and 0x0f
+            out += hex[i]
+            i = `in` and 0x0f
+            out += hex[i]
+            ++j
+        }
+        return out
     }
 
     fun disableNFCInForeground(nfcAdapter: NfcAdapter, activity: Activity) {

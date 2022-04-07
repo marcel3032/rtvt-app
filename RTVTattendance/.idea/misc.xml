@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Marcel/UFOKSP/2021_22/ksp/RTVTattendance/app/src/main/res/drawable/ic_check.xml" value="0.2505" />
+        <entry key="..\:/Marcel/UFOKSP/2021_22/ksp/RTVTattendance/app/src/main/res/drawable/ic_cross.xml" value="0.2505" />
+        <entry key="..\:/Marcel/UFOKSP/2021_22/ksp/RTVTattendance/app/src/main/res/drawable/ic_launcher_background.xml" value="0.155" />
+        <entry key="..\:/Marcel/UFOKSP/2021_22/ksp/RTVTattendance/app/src/main/res/layout/activity_main.xml" value="0.3614583333333333" />
+        <entry key="..\:/Marcel/UFOKSP/2021_22/ksp/RTVTattendance/app/src/main/res/layout/person_layout.xml" value="0.2807971014492754" />
+        <entry key="..\:/Marcel/UFOKSP/2021_22/ksp/RTVTattendance/app/src/main/res/xml/filepaths.xml" value="0.1453125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
