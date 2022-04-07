@@ -4,6 +4,8 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.File
+import java.util.*
+import kotlin.collections.ArrayList
 
 class JsonsHelpers(private var activity: MainActivity) {
     var resultsFile: File = File(activity.filesDir.absolutePath, "attendance.json")
@@ -17,6 +19,7 @@ class JsonsHelpers(private var activity: MainActivity) {
 
     fun writeResults(person: JSONObject){
         val resultsJson = getResultsJson()
+        person.put("time", Calendar.getInstance().time.toGMTString())
         resultsJson.getJSONArray(getResultsJson().length()-1).put(person)
         resultsFile.writeText(resultsJson.toString())
     }
