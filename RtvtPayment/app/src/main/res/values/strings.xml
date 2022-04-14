@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">RTVT payment</string>
-    <string name="all">All</string>
+    <string name="all">Transfer all money</string>
     <string name="buy">Buy</string>
 </resources>

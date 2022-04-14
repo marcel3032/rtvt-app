@@ -6,11 +6,15 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 
 class ViewPagerAdapter(fragmentManager: FragmentManager?) :
     FragmentStatePagerAdapter(fragmentManager!!, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+    var addMoneyFragment: AddMoneyFragment = AddMoneyFragment.newInstance()
+    var transferMoneyFragment: TransferMoneyFragment = TransferMoneyFragment.newInstance()
+    var shopFragment: ShopFragment = ShopFragment.newInstance()
+
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> AddMoneyFragment.newInstance()
-            1 -> TransferMoneyFragment.newInstance()
-            2 -> ShopFragment.newInstance()
+            0 -> addMoneyFragment
+            1 -> transferMoneyFragment
+            2 -> shopFragment
             else -> AddMoneyFragment.newInstance()
         }
     }

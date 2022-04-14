@@ -1,5 +1,6 @@
 package sk.marcel.rtvt_payment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +11,7 @@ import android.widget.EditText
 import android.widget.ListView
 import androidx.fragment.app.Fragment
 
-class ShopFragment(): Fragment() {
+class ShopFragment : Fragment(), NfcFragment{
     companion object {
         const val TITLE = "Shop"
         fun newInstance() = ShopFragment()
@@ -27,5 +28,9 @@ class ShopFragment(): Fragment() {
         listView.adapter = adapter
 
         return view
+    }
+
+    override fun doNfcIntent(intent: Intent) {
+        TODO("Not yet implemented")
     }
 }

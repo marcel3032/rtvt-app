@@ -6,17 +6,18 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.allViews
 import androidx.core.view.children
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import sk.marcel.rtvtAttendance.NFC
 
 class MainActivity : AppCompatActivity() {
     companion object {
         lateinit var jsonsHelpers: JsonsHelpers
         private var mNfcAdapter: NfcAdapter? = null
     }
+
+    lateinit var viewPagerAdapter: ViewPagerAdapter
+    lateinit var viewPager: ViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         jsonsHelpers = JsonsHelpers(this)
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
-        val viewPager = findViewById<View>(R.id.pager) as ViewPager
-        val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
+        viewPager = findViewById<View>(R.id.pager) as ViewPager
+        viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
         viewPager.adapter = viewPagerAdapter
 
         val tabLayout = findViewById<View>(R.id.tab) as TabLayout
@@ -54,13 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         if(intent!=null) {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
-                val res = NFC.readId(intent)
-                if(res!=null){
-                    Toast.makeText(this, res, Toast.LENGTH_SHORT).show()
-                    if(jsonsHelpers.isNotIdInResults(res)){
-                        jsonsHelpers.addPerson(res)
-                    }
-                }
+                (viewPagerAdapter.getItem(viewPager.currentItem) as NfcFragment).doNfcIntent(intent)
             }
         }
     }
