@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.ListView
+import android.widget.*
 import androidx.fragment.app.Fragment
 
 class ShopFragment : Fragment(), NfcFragment{
@@ -17,12 +14,14 @@ class ShopFragment : Fragment(), NfcFragment{
         fun newInstance() = ShopFragment()
     }
 
+    lateinit var adapter: ItemsAdapter
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.fragment_shop, container, false)
 
-        lateinit var adapter: ArrayAdapter<Item>
+
         if(context!=null) {
-            adapter = ItemsAdapter(requireContext(), R.layout.item_layout, MainActivity.jsonsHelpers.getItemsList())
+            adapter = ItemsAdapter(this, R.layout.item_layout, MainActivity.jsonsHelpers.getItemsList())
         }
         val listView = view.findViewById<ListView>(R.id.item_list)
         listView.adapter = adapter
@@ -31,6 +30,15 @@ class ShopFragment : Fragment(), NfcFragment{
     }
 
     override fun doNfcIntent(intent: Intent) {
-        TODO("Not yet implemented")
+        val res = NFC.removeMoney(intent, adapter.sum)
+        if(res){
+            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(context, "Nope (not enough money on card?)", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun updateSum(sum: Long){
+        view?.findViewById<TextView>(R.id.sum)!!.text = "Sum: $sum"
     }
 }

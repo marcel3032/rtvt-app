@@ -96,7 +96,7 @@ class JsonsHelpers(private var activity: MainActivity) {
         val items = getItemsJson()
         val itemsList = ArrayList<Item>()
         for(i in 0 until items.length()){
-            itemsList.add(Item(i, items.getJSONObject(i).getString("name"), items.getJSONObject(i).getInt("price")))
+            itemsList.add(Item(i, items.getJSONObject(i).getString("name"), items.getJSONObject(i).getLong("price")))
         }
         return itemsList
     }

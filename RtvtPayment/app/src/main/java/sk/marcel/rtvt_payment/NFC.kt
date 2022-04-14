@@ -11,6 +11,7 @@ import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
 import android.util.Log
 import java.io.IOException
+import java.nio.ByteBuffer
 
 object NFC {
     private val key: ByteArray = MifareClassic.KEY_DEFAULT
@@ -27,25 +28,17 @@ object NFC {
 
     private val som: ByteArray = byteArrayOf(aew, gre, gep, mw, pgw, wop)
 
-    fun getNumberFromByteArray(byteArray: ByteArray): Long{
-        var res = 0L
-        var times = 1
-        for(i in 0..8){
-            res += byteArray[i]*times
-            times *= 255
-        }
-        return res
+    private fun getByteArrayFromNumber(x: Long): ByteArray {
+        val buffer: ByteBuffer = ByteBuffer.allocate(16)
+        buffer.putLong(x)
+        return buffer.array()
     }
 
-    fun getByteArrayFromNumber(input_number:Long): ByteArray{
-        var number = input_number
-        val res = ByteArray(16)
-        var times = 1
-        for(i in 0..8){
-            res[i] = (number % 255).toByte()
-            number /= 255
-        }
-        return res
+    private fun getNumberFromByteArray(bytes: ByteArray): Long {
+        val buffer: ByteBuffer = ByteBuffer.allocate(16)
+        buffer.put(bytes)
+        buffer.flip()
+        return buffer.long
     }
 
     fun readNumber(intent: Intent):Long? {
@@ -146,6 +139,28 @@ object NFC {
             Log.e("rtvt", e.localizedMessage)
         }
         return null
+    }
+
+    fun removeMoney(intent: Intent, amount:Long): Boolean{
+        val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
+        try {
+            mfc.connect()
+            val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(4), som)
+            if (auth) {
+                val previousAmount = getNumberFromByteArray(mfc.readBlock(4))
+                val newAmount = previousAmount - amount
+                if(newAmount>=0) {
+                    mfc.writeBlock(4, getByteArrayFromNumber(newAmount))
+                    return true
+                }
+            } else {
+                Log.e("rtvt", "Cannot authentificate")
+            }
+            mfc.close()
+        } catch (e: IOException) {
+            Log.e("rtvt", e.localizedMessage)
+        }
+        return false
     }
 
     private fun byteArrayToHexString(inarray: ByteArray): String {
