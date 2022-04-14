@@ -15,7 +15,8 @@ import android.util.Log
 import java.io.IOException
 
 object NFC {
-    private val key: ByteArray = MifareClassic.KEY_DEFAULT
+    //private val key: ByteArray = MifareClassic.KEY_DEFAULT
+    private val key: ByteArray = byteArrayOf(0x11, 0x41, 0x3A, 0xBE.toByte(), 0xED.toByte(), 0xCD.toByte())
 
     fun read(intent: Intent):Pair<String, Int>? {
         if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
@@ -30,11 +31,11 @@ object NFC {
                     picture = mfc.readBlock(9)[0].toInt()
                     return Pair(team, picture)
                 } else {
-                    Log.e("pokus", "Cannot authentificate")
+                    Log.e("rtvt", "Cannot authentificate")
                 }
                 mfc.close()
             } catch (e: IOException) {
-                Log.e("pokus", e.localizedMessage)
+                Log.e("rtvt", e.localizedMessage)
             }
         }
         return null
