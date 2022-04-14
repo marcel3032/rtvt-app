@@ -9,12 +9,14 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?) :
     var addMoneyFragment: AddMoneyFragment = AddMoneyFragment.newInstance()
     var transferMoneyFragment: TransferMoneyFragment = TransferMoneyFragment.newInstance()
     var shopFragment: ShopFragment = ShopFragment.newInstance()
+    var cardInfoFragment: CardInfoFragment = CardInfoFragment.newInstance()
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> addMoneyFragment
             1 -> transferMoneyFragment
             2 -> shopFragment
+            3 -> cardInfoFragment
             else -> AddMoneyFragment.newInstance()
         }
     }
@@ -28,11 +30,12 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?) :
             0 -> AddMoneyFragment.TITLE
             1 -> TransferMoneyFragment.TITLE
             2 -> ShopFragment.TITLE
+            3 -> CardInfoFragment.TITLE
             else -> ""
         }
     }
 
     companion object {
-        private const val TAB_COUNT = 3
+        private const val TAB_COUNT = 4
     }
 }

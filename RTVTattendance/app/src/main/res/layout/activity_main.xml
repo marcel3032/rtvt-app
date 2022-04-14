@@ -33,6 +33,27 @@
             android:layout_height="wrap_content"
             android:onClick="newActivity"
             android:text="New activity"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Money to add:"/>
+
+        <EditText
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:minWidth="80dp"
+            android:textSize="35sp"
+            android:text="0"/>
 
     </LinearLayout>
 

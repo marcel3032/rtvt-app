@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import android.widget.CompoundButton
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -33,12 +32,13 @@ class TransferMoneyFragment : Fragment(), NfcFragment {
         if(amountTaken==0L) {
             var moneyToTranfer:Long? = null
             if(view?.findViewById<CheckBox>(R.id.all_money)?.isChecked == false){
-                moneyToTranfer = view?.findViewById<EditText>(R.id.money)?.text.toString().toLong()
+                val moneyView = view?.findViewById<EditText>(R.id.money)
+                moneyToTranfer = if(moneyView?.text.toString()=="") 0L  else moneyView?.text.toString().toLong()
             }
-            amountTaken = NFC.getMoney(intent,moneyToTranfer)
+            amountTaken = NFC.transferMoneyFromCard(intent,moneyToTranfer)
             Toast.makeText(context, amountTaken.toString(), Toast.LENGTH_SHORT).show()
         } else {
-            val res = NFC.putMoney(intent, amountTaken)
+            val res = NFC.transferMoneyToCard(intent, null, amountTaken)
             if(res==null)
                 Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
             else {

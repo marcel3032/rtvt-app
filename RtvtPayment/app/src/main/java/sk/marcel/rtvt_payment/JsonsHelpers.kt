@@ -63,6 +63,16 @@ class JsonsHelpers(private var activity: MainActivity) {
         return null
     }
 
+    fun getPersonByIdObject(id:String):Person?{
+        val results = getPeopleJson()
+        for(i in 0 until results.length()){
+            if(id == results.getJSONObject(i).getString("id")){
+                return Person(results.getJSONObject(i).getString("id"), results.getJSONObject(i).getString("name"), results.getJSONObject(i).getString("group"))
+            }
+        }
+        return null
+    }
+
     fun resetResultsFile(){
         resultsFile.writeText("[[]]")
     }

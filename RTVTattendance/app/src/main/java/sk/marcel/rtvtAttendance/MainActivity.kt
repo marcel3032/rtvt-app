@@ -7,9 +7,7 @@ import android.net.Uri
 import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
@@ -44,11 +42,16 @@ class MainActivity : AppCompatActivity() {
 
         if(intent!=null) {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
-                val res = NFC.readId(intent)
-                if(res!=null){
-                    Toast.makeText(this, res, Toast.LENGTH_SHORT).show()
-                    if(jsonsHelpers.isNotIdInResults(res)){
-                        jsonsHelpers.addPerson(res)
+                val id = NFC.readId(intent)
+                if(id!=null){
+                    if(jsonsHelpers.isNotIdInResults(id)){
+                        val moneyView = findViewById<EditText>(R.id.money)
+                        val moneyToAdd = if(moneyView.text.toString()=="") 0L  else moneyView.text.toString().toLong()
+                        val res = NFC.addMoney(intent, moneyToAdd)
+                        Toast.makeText(this, res.toString(), Toast.LENGTH_SHORT).show()
+                        if (res != null) {
+                            jsonsHelpers.addPerson(res.first, res.second)
+                        }
                         setPeopleList()
                     }
                 }

@@ -17,9 +17,10 @@ class JsonsHelpers(private var activity: MainActivity) {
         }
     }
 
-    fun writeResults(person: JSONObject){
+    fun writeResults(person: JSONObject, money: Long?){
         val resultsJson = getResultsJson()
         person.put("time", Calendar.getInstance().time.toGMTString())
+        person.put("money", money)
         resultsJson.getJSONArray(getResultsJson().length()-1).put(person)
         resultsFile.writeText(resultsJson.toString())
     }
@@ -67,8 +68,8 @@ class JsonsHelpers(private var activity: MainActivity) {
         resultsFile.writeText("[[]]")
     }
 
-    fun addPerson(id: String){
-        getPersonById(id)?.let { writeResults(it) }
+    fun addPerson(id: String, money: Long?){
+        getPersonById(id)?.let { writeResults(it, money) }
     }
 
     fun getPeopleJson(): JSONArray {

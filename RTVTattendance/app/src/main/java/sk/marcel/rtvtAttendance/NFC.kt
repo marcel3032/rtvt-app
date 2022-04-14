@@ -9,9 +9,37 @@ import android.nfc.Tag
 import android.nfc.tech.MifareClassic
 import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
+import android.util.Log
+import java.io.IOException
+import java.nio.ByteBuffer
 
 object NFC {
     private val key: ByteArray = MifareClassic.KEY_DEFAULT
+
+    private const val wop: Byte = 0xCD.toByte()
+    private const val wob: Byte = 0xAD.toByte()
+    private const val aawe: Byte = 0xCE.toByte()
+    private const val gaf: Byte = 0x51
+    private const val gre: Byte = 0x41
+    private const val pgw: Byte = 0xED.toByte()
+    private const val aew: Byte = 0x11
+    private const val gep: Byte = 0x3A
+    private const val mw: Byte = 0xBE.toByte()
+
+    private val som: ByteArray = byteArrayOf(aew, gre, gep, mw, pgw, wop)
+
+    private fun getByteArrayFromNumber(x: Long): ByteArray {
+        val buffer: ByteBuffer = ByteBuffer.allocate(16)
+        buffer.putLong(x)
+        return buffer.array()
+    }
+
+    private fun getNumberFromByteArray(bytes: ByteArray): Long {
+        val buffer: ByteBuffer = ByteBuffer.allocate(16)
+        buffer.put(bytes)
+        buffer.flip()
+        return buffer.long
+    }
 
     fun readId(intent: Intent):String? {
         if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
@@ -38,6 +66,27 @@ object NFC {
             ++j
         }
         return out
+    }
+
+    fun addMoney(intent: Intent, amount:Long): Pair<String, Long>?{
+        val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
+        val myTag: Tag? = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG) as Tag?
+        try {
+            mfc.connect()
+            val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(4), som)
+            if (auth) {
+                val previousAmount = getNumberFromByteArray(mfc.readBlock(4))
+                val newAmount = maxOf(0, previousAmount + amount)
+                mfc.writeBlock(4, getByteArrayFromNumber(newAmount))
+                return Pair(byteArrayToHexString(myTag!!.id), newAmount)
+            } else {
+                Log.e("rtvt", "Cannot authentificate")
+            }
+            mfc.close()
+        } catch (e: IOException) {
+            Log.e("rtvt", e.localizedMessage)
+        }
+        return null
     }
 
     fun disableNFCInForeground(nfcAdapter: NfcAdapter, activity: Activity) {

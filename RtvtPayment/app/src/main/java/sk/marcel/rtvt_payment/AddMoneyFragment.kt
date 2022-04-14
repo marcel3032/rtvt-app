@@ -51,10 +51,13 @@ class AddMoneyFragment : Fragment(), NfcFragment {
     }
 
     override fun doNfcIntent(intent: Intent) {
-        val res = NFC.addMoney(intent, getAllowedCardIds(), view?.findViewById<EditText>(R.id.money)?.text.toString().toLong())
+        val moneyView = view?.findViewById<EditText>(R.id.money)
+        val moneyToAdd = if(moneyView?.text.toString()=="") 0L  else moneyView?.text.toString().toLong()
+        val res = NFC.transferMoneyToCard(intent, getAllowedCardIds(), moneyToAdd)
         if(res!=null){
             Toast.makeText(context, res.toString(), Toast.LENGTH_SHORT).show()
-            uncheck(res.first)
+            if(view?.findViewById<CheckBox>(R.id.uncheck_after_write)?.isChecked!!)
+                uncheck(res.first)
         } else {
             Toast.makeText(context, "Nope", Toast.LENGTH_SHORT).show()
         }

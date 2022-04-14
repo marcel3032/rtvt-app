@@ -3,4 +3,5 @@
     <string name="all_money">Transfer all money</string>
     <string name="buy">Buy</string>
     <string name="all">All</string>
+    <string name="uncheck_after_write">Uncheck after write</string>
 </resources>
