@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity() {
         if(intent!=null) {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
                 val res = NFC.read(intent)
-                if(res!=null) {
+                if(res!=null && 0<=res.second && res.second<jsonsHelpers.getPicturesNum()) {
                     val jsonRes = JSONObject()
                     jsonRes.put(Constants.team, res.first)
                     jsonRes.put(Constants.pictureNumber, res.second)

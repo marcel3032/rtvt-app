@@ -10,11 +10,13 @@ import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
 import android.util.Log
 import java.io.IOException
+import java.nio.ByteBuffer
 
 object NFC {
     private const val teamSector = 8
     private const val pictureSector = 9
     private const val sectorSize = 16
+    private const val pictureOffset = 473
 
     private val key: ByteArray = MifareClassic.KEY_DEFAULT
 
@@ -30,6 +32,19 @@ object NFC {
 
     private val som: ByteArray = byteArrayOf(aew, gre, gep, mw, pgw, wop)
 
+    private fun getByteArrayFromNumber(x: Int): ByteArray {
+        val buffer: ByteBuffer = ByteBuffer.allocate(sectorSize)
+        buffer.putInt(x)
+        return buffer.array()
+    }
+
+    private fun getNumberFromByteArray(bytes: ByteArray): Int {
+        val buffer: ByteBuffer = ByteBuffer.allocate(sectorSize)
+        buffer.put(bytes)
+        buffer.flip()
+        return buffer.int
+    }
+
     fun writePictureResult(team: String, picture: Int, intent: Intent) : Boolean {
         val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
         mfc.connect()
@@ -38,10 +53,7 @@ object NFC {
             val teamNameByteArray: ByteArray = team.substring(0, minOf(sectorSize, team.length)).toByteArray()
             System.arraycopy(teamNameByteArray, 0, bWriteTeam, 0, teamNameByteArray.size)
             mfc.writeBlock(teamSector, bWriteTeam)
-            val bWritePicture = ByteArray(sectorSize)
-            val pictureNumerByteArray = byteArrayOf(picture.toByte())
-            System.arraycopy(pictureNumerByteArray, 0, bWritePicture, 0, pictureNumerByteArray.size)
-            mfc.writeBlock(pictureSector, bWritePicture)
+            mfc.writeBlock(pictureSector, getByteArrayFromNumber(picture+ pictureOffset))
             mfc.close()
         } else {
             Log.e("rtvt", "Cannot authentificate")
