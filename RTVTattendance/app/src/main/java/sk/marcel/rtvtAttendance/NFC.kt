@@ -14,6 +14,9 @@ import java.io.IOException
 import java.nio.ByteBuffer
 
 object NFC {
+    private const val moneySector = 4
+    private const val sectorSize = 16
+
     private val key: ByteArray = MifareClassic.KEY_DEFAULT
 
     private const val wop: Byte = 0xCD.toByte()
@@ -29,13 +32,13 @@ object NFC {
     private val som: ByteArray = byteArrayOf(aew, gre, gep, mw, pgw, wop)
 
     private fun getByteArrayFromNumber(x: Long): ByteArray {
-        val buffer: ByteBuffer = ByteBuffer.allocate(16)
+        val buffer: ByteBuffer = ByteBuffer.allocate(sectorSize)
         buffer.putLong(x)
         return buffer.array()
     }
 
     private fun getNumberFromByteArray(bytes: ByteArray): Long {
-        val buffer: ByteBuffer = ByteBuffer.allocate(16)
+        val buffer: ByteBuffer = ByteBuffer.allocate(sectorSize)
         buffer.put(bytes)
         buffer.flip()
         return buffer.long
@@ -73,18 +76,18 @@ object NFC {
         val myTag: Tag? = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG) as Tag?
         try {
             mfc.connect()
-            val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(4), som)
+            val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(moneySector), som)
             if (auth) {
-                val previousAmount = getNumberFromByteArray(mfc.readBlock(4))
+                val previousAmount = getNumberFromByteArray(mfc.readBlock(moneySector))
                 val newAmount = maxOf(0, previousAmount + amount)
-                mfc.writeBlock(4, getByteArrayFromNumber(newAmount))
+                mfc.writeBlock(moneySector, getByteArrayFromNumber(newAmount))
                 return Pair(byteArrayToHexString(myTag!!.id), newAmount)
             } else {
                 Log.e("rtvt", "Cannot authentificate")
             }
             mfc.close()
         } catch (e: IOException) {
-            Log.e("rtvt", e.localizedMessage)
+            Log.e("rtvt", e.localizedMessage?:"")
         }
         return null
     }

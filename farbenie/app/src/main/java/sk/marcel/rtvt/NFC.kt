@@ -12,32 +12,36 @@ import android.util.Log
 import java.io.IOException
 
 object NFC {
+    private const val teamSector = 8
+    private const val pictureSector = 9
+    private const val sectorSize = 16
+
     private val key: ByteArray = MifareClassic.KEY_DEFAULT
 
-    private val wop: Byte = 0xCD.toByte()
-    private val wob: Byte = 0xAD.toByte()
-    private val aawe: Byte = 0xCE.toByte()
-    private val gaf: Byte = 0x51
-    private val gre: Byte = 0x41
-    private val pgw: Byte = 0xED.toByte()
-    private val aew: Byte = 0x11
-    private val gep: Byte = 0x3A
-    private val mw: Byte = 0xBE.toByte()
+    private const val wop: Byte = 0xCD.toByte()
+    private const val wob: Byte = 0xAD.toByte()
+    private const val aawe: Byte = 0xCE.toByte()
+    private const val gaf: Byte = 0x51
+    private const val gre: Byte = 0x41
+    private const val pgw: Byte = 0xED.toByte()
+    private const val aew: Byte = 0x11
+    private const val gep: Byte = 0x3A
+    private const val mw: Byte = 0xBE.toByte()
 
     private val som: ByteArray = byteArrayOf(aew, gre, gep, mw, pgw, wop)
 
     fun writePictureResult(team: String, picture: Int, intent: Intent) : Boolean {
         val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
         mfc.connect()
-        if(mfc.authenticateSectorWithKeyB(2, som)){
-            val bWriteTeam = ByteArray(16)
-            val teamNameByteArray: ByteArray = team.substring(0, minOf(16, team.length)).toByteArray()
+        if(mfc.authenticateSectorWithKeyB(mfc.blockToSector(teamSector), som)){
+            val bWriteTeam = ByteArray(sectorSize)
+            val teamNameByteArray: ByteArray = team.substring(0, minOf(sectorSize, team.length)).toByteArray()
             System.arraycopy(teamNameByteArray, 0, bWriteTeam, 0, teamNameByteArray.size)
-            mfc.writeBlock(8, bWriteTeam)
-            val bWritePicture = ByteArray(16)
+            mfc.writeBlock(teamSector, bWriteTeam)
+            val bWritePicture = ByteArray(sectorSize)
             val pictureNumerByteArray = byteArrayOf(picture.toByte())
             System.arraycopy(pictureNumerByteArray, 0, bWritePicture, 0, pictureNumerByteArray.size)
-            mfc.writeBlock(9, bWritePicture)
+            mfc.writeBlock(pictureSector, bWritePicture)
             mfc.close()
         } else {
             Log.e("rtvt", "Cannot authentificate")
@@ -55,17 +59,17 @@ object NFC {
             val picture: Int
             try {
                 mfc.connect()
-                val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(8), som)
+                val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(teamSector), som)
                 if (auth) {
-                    team = String(mfc.readBlock(8))
-                    picture = mfc.readBlock(9)[0].toInt()
+                    team = String(mfc.readBlock(teamSector))
+                    picture = mfc.readBlock(pictureSector)[0].toInt()
                     return "$team $picture"
                 } else {
                     Log.e("rtvt", "Cannot authentificate")
                 }
                 mfc.close()
             } catch (e: IOException) {
-                Log.e("rtvt", e.localizedMessage)
+                Log.e("rtvt", e.localizedMessage?:"")
             }
         }
         return null
