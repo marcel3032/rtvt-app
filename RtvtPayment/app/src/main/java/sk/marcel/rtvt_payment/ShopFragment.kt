@@ -1,12 +1,14 @@
 package sk.marcel.rtvt_payment
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import cn.pedant.SweetAlert.SweetAlertDialog
 
 class ShopFragment : Fragment(), NfcFragment{
     companion object {
@@ -15,6 +17,7 @@ class ShopFragment : Fragment(), NfcFragment{
     }
 
     lateinit var adapter: ItemsAdapter
+    var alertDialog: SweetAlertDialog? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.fragment_shop, container, false)
@@ -32,9 +35,25 @@ class ShopFragment : Fragment(), NfcFragment{
     override fun doNfcIntent(intent: Intent) {
         val res = NFC.removeMoney(intent, adapter.sum)
         if(res){
-            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
+            alertDialog?.cancel()
+            alertDialog = SweetAlertDialog(context, SweetAlertDialog.SUCCESS_TYPE)
+                .setTitleText("Success!")
+                .setContentText("Items bought")
+            alertDialog?.show()
+
+            val mp: MediaPlayer = MediaPlayer.create(context, R.raw.ack)
+            mp.start()
+            mp.setOnCompletionListener { mp.release() }
+
         } else {
-            Toast.makeText(context, "Nope (not enough money on card?)", Toast.LENGTH_SHORT).show()
+            alertDialog?.cancel()
+            alertDialog = SweetAlertDialog(context, SweetAlertDialog.ERROR_TYPE)
+                .setTitleText("Nope")
+                .setContentText("Something failed (not enough money on card?)")
+            alertDialog?.show()
+            val mp: MediaPlayer = MediaPlayer.create(context, R.raw.error)
+            mp.start()
+            mp.setOnCompletionListener { mp.release() }
         }
     }
 

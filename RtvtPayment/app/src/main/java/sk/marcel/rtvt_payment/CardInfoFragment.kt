@@ -1,19 +1,23 @@
 package sk.marcel.rtvt_payment
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import cn.pedant.SweetAlert.SweetAlertDialog
+
 
 class CardInfoFragment : Fragment(), NfcFragment{
     companion object {
         const val TITLE = "Card Info"
         fun newInstance() = CardInfoFragment()
     }
+
+    var alertDialog: SweetAlertDialog? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.fragment_info, container, false)
@@ -27,8 +31,20 @@ class CardInfoFragment : Fragment(), NfcFragment{
             view?.findViewById<TextView>(R.id.name)!!.text = person.name
             view?.findViewById<TextView>(R.id.group)!!.text = person.group
             view?.findViewById<TextView>(R.id.money)!!.text = "${res.second} peňazí"
+
+            val mp: MediaPlayer = MediaPlayer.create(context, R.raw.ack)
+            mp.start()
+            mp.setOnCompletionListener { mp.release() }
         } else {
-            Toast.makeText(context, "Nope. Try again", Toast.LENGTH_SHORT).show()
+            alertDialog?.cancel()
+            alertDialog = SweetAlertDialog(context, SweetAlertDialog.ERROR_TYPE)
+                .setTitleText("Nope")
+                .setContentText("Something failed")
+            alertDialog?.show()
+
+            val mp: MediaPlayer = MediaPlayer.create(context, R.raw.error)
+            mp.start()
+            mp.setOnCompletionListener { mp.release() }
         }
     }
 }

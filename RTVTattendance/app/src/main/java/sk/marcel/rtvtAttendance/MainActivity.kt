@@ -3,6 +3,7 @@ package sk.marcel.rtvtAttendance
 import android.R.attr.path
 import android.content.DialogInterface
 import android.content.Intent
+import android.media.MediaPlayer
 import android.net.Uri
 import android.nfc.NfcAdapter
 import android.os.Bundle
@@ -12,12 +13,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.core.net.toUri
+import cn.pedant.SweetAlert.SweetAlertDialog
 import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
     lateinit var jsonsHelpers : JsonsHelpers
     private var mNfcAdapter: NfcAdapter? = null
+    var alertDialog: SweetAlertDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,11 +51,39 @@ class MainActivity : AppCompatActivity() {
                         val moneyView = findViewById<EditText>(R.id.money)
                         val moneyToAdd = if(moneyView.text.toString()=="") 0L  else moneyView.text.toString().toLong()
                         val res = NFC.addMoney(intent, moneyToAdd)
-                        Toast.makeText(this, res.toString(), Toast.LENGTH_SHORT).show()
                         if (res != null) {
+                            alertDialog?.cancel()
+                            alertDialog = SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                                .setTitleText("Success!")
+                                .setContentText("Money added")
+                            alertDialog?.show()
                             jsonsHelpers.addPerson(res.first, res.second)
+
+                            val mp: MediaPlayer = MediaPlayer.create(this, R.raw.ack)
+                            mp.start()
+                            mp.setOnCompletionListener { mp.release() }
+                        } else {
+                            alertDialog?.cancel()
+                            alertDialog = SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                                .setTitleText("Nope")
+                                .setContentText("Something failed")
+                            alertDialog?.show()
+
+                            val mp: MediaPlayer = MediaPlayer.create(this, R.raw.error)
+                            mp.start()
+                            mp.setOnCompletionListener { mp.release() }
                         }
                         setPeopleList()
+                    } else {
+                        alertDialog?.cancel()
+                        alertDialog = SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("Nope")
+                            .setContentText("Already scanned")
+                        alertDialog?.show()
+
+                        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.error)
+                        mp.start()
+                        mp.setOnCompletionListener { mp.release() }
                     }
                 }
             }

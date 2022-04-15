@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.nfc.NfcAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -133,16 +134,27 @@ class MainActivity : AppCompatActivity() {
                     jsonRes.put(Constants.team, res.first)
                     jsonRes.put(Constants.pictureNumber, res.second)
                     if(jsonsHelpers.isAlreadySolved(jsonRes)){
-                        Toast.makeText(this, "Already submitted picture", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Already submitted picture", Toast.LENGTH_LONG).show()
+                        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.error)
+                        mp.start()
+                        mp.setOnCompletionListener { mp.release() }
                         return
                     }
 
                     jsonRes.put("datetime", Calendar.getInstance().time.toGMTString())
                     jsonsHelpers.addSolvedPicture(jsonRes)
                     displayLastPicture()
+
+                    val mp: MediaPlayer = MediaPlayer.create(this, R.raw.ack)
+                    mp.start()
+                    mp.setOnCompletionListener { mp.release() }
+                } else {
+                    Toast.makeText(this, "reading failed", Toast.LENGTH_LONG).show()
+
+                    val mp: MediaPlayer = MediaPlayer.create(this, R.raw.error)
+                    mp.start()
+                    mp.setOnCompletionListener { mp.release() }
                 }
-                else
-                    Toast.makeText(this, "reading failed", Toast.LENGTH_SHORT).show()
             }
         }
     }

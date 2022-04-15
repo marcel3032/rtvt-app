@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.nfc.NfcAdapter
 import android.os.Bundle
 import android.text.SpannableStringBuilder
@@ -174,13 +175,20 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     if(NFC.writePictureResult(jsonsHelpers.getTeamName(), jsonsHelpers.getProgressNum(), intent)){
                         Toast.makeText(this, "Data written", Toast.LENGTH_SHORT).show()
+                        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.ack)
+                        mp.start()
+                        mp.setOnCompletionListener { mp.release() }
                         jsonsHelpers.startNewPicture()
                         reading = true
                         createPixels()
                         displayNeededColors()
-                    }
-                    else
+                    } else {
                         Toast.makeText(this, "write failed", Toast.LENGTH_SHORT).show()
+
+                        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.error)
+                        mp.start()
+                        mp.setOnCompletionListener { mp.release() }
+                    }
                 }
             }
         }
