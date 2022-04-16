@@ -13,7 +13,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import cn.pedant.SweetAlert.SweetAlertDialog
+import org.json.JSONArray
+import org.json.JSONObject
 import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.math.sqrt
 
 
 class MainActivity : AppCompatActivity() {
@@ -58,12 +63,15 @@ class MainActivity : AppCompatActivity() {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
                 val id = NFC.readId(intent)
                 if(id!=null){
-                    if(jsonsHelpers.isNotIdInResults(id)){
+                    if(jsonsHelpers.isCheckedOut(id)){
+                        createAnnouncement(SweetAlertDialog.WARNING_TYPE, "Nope", "Already scanned", R.raw.error)
+                    } else if(jsonsHelpers.isCheckedIn(id) != null){
                         val moneyView = findViewById<EditText>(R.id.money)
-                        val moneyToAdd = if(moneyView.text.toString()=="") 0L  else moneyView.text.toString().toLong()
+                        val moneyPerMinute = if(moneyView.text.toString()=="") 0L  else moneyView.text.toString().toLong()
+                        val moneyToAdd = computeMoneyToAdd(moneyPerMinute, jsonsHelpers.isCheckedIn(id)!!)
                         val res = NFC.addMoney(intent, moneyToAdd)
                         if (res != null) {
-                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Money added", R.raw.ack)
+                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Check out, $moneyToAdd money added", R.raw.ack)
                             jsonsHelpers.addPerson(res.first, res.second)
                         } else {
                             createAnnouncement(SweetAlertDialog.ERROR_TYPE, "Nope", "Something failed", R.raw.error)
@@ -71,10 +79,26 @@ class MainActivity : AppCompatActivity() {
                         setPeopleList()
                     } else {
                         createAnnouncement(SweetAlertDialog.WARNING_TYPE, "Nope", "Already scanned", R.raw.error)
+                        val res = NFC.addMoney(intent, 0L)
+                        if (res != null) {
+                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Checked in", R.raw.ack)
+                            jsonsHelpers.addPerson(res.first, res.second)
+                        } else {
+                            createAnnouncement(SweetAlertDialog.ERROR_TYPE, "Nope", "Something failed", R.raw.error)
+                        }
+                        setPeopleList()
                     }
                 }
             }
         }
+    }
+
+    fun computeMoneyToAdd(moneyPerMinute:Long, checkedInJson:JSONObject):Long{
+        val pattern = "yyyy.MM.dd HH:mm:ss"
+        val simpleDateFormat = SimpleDateFormat(pattern)
+        val checkedInTime = simpleDateFormat.parse(checkedInJson.getString("time")).time
+        val groupTimes = sqrt(jsonsHelpers.getCountPeopleInSameGroup(checkedInJson.getString("group")).toDouble())
+        return (moneyPerMinute * (((Calendar.getInstance().time.time - checkedInTime)/60000)) * groupTimes).toLong()
     }
 
     fun setPeopleList(){

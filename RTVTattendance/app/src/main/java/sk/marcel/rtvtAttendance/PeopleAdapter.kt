@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.CheckedTextView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 
 
 class PeopleAdapter(private val mContext: MainActivity, private val resourceLayout: Int, items: List<Person>) :
@@ -22,9 +23,9 @@ class PeopleAdapter(private val mContext: MainActivity, private val resourceLayo
             label.text = p.name
             label.textSize = 25f
             if(mContext.jsonsHelpers.isNotIdInResults(p.id))
-                label.checkMarkDrawable = mContext.getDrawable(R.drawable.ic_cross)
+                label.checkMarkDrawable = AppCompatResources.getDrawable(mContext, R.drawable.ic_cross)
             else
-                label.checkMarkDrawable = mContext.getDrawable(R.drawable.ic_check)
+                label.checkMarkDrawable = AppCompatResources.getDrawable(mContext, R.drawable.ic_check)
             group.text = p.group
             group.textSize = 18f
         }

@@ -4,8 +4,8 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.File
+import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 class JsonsHelpers(private var activity: MainActivity) {
     var resultsFile: File = File(activity.filesDir.absolutePath, "attendance.json")
@@ -19,7 +19,10 @@ class JsonsHelpers(private var activity: MainActivity) {
 
     fun writeResults(person: JSONObject, money: Long?){
         val resultsJson = getResultsJson()
-        person.put("time", Calendar.getInstance().time.toGMTString())
+        val pattern = "yyyy.MM.dd HH:mm:ss"
+        val simpleDateFormat = SimpleDateFormat(pattern)
+
+        person.put("time", simpleDateFormat.format(Calendar.getInstance().time))
         person.put("money", money)
         resultsJson.getJSONArray(getResultsJson().length()-1).put(person)
         resultsFile.writeText(resultsJson.toString())
@@ -44,14 +47,28 @@ class JsonsHelpers(private var activity: MainActivity) {
         }
     }
 
-    fun isNotIdInResults(id:String):Boolean{
+    fun isCheckedIn(id:String):JSONObject?{
         val results = getLastResultsJson()
         for(i in 0 until results.length()){
             if(id == results.getJSONObject(i).getString("id")){
-                return false
+                return results.getJSONObject(i)
             }
         }
-        return true
+        return null
+    }
+
+    fun isCheckedOut(id:String):Boolean{
+        var result = false
+        val results = getLastResultsJson()
+        for(i in 0 until results.length()){
+            if(id == results.getJSONObject(i).getString("id")){
+                if(result)
+                    return true
+                else
+                    result = true
+            }
+        }
+        return false
     }
 
     fun getPersonById(id:String):JSONObject?{
@@ -62,6 +79,17 @@ class JsonsHelpers(private var activity: MainActivity) {
             }
         }
         return null
+    }
+
+    fun getCountPeopleInSameGroup(group:String):Int{
+        var result = 0
+        val results = getPeopleJson()
+        for(i in 0 until results.length()){
+            if(group == results.getJSONObject(i).getString("group")){
+                result++
+            }
+        }
+        return result
     }
 
     fun resetResultsFile(){
