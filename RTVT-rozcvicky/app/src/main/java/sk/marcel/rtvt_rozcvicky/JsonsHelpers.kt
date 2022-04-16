@@ -82,14 +82,14 @@ class JsonsHelpers(private var activity: MainActivity) {
     }
 
     fun getCountPeopleInSameGroup(group:String):Int{
-        var result = 0
-        val results = getPeopleJson()
+        val result = HashSet<String>()
+        val results = getLastResultsJson()
         for(i in 0 until results.length()){
             if(group == results.getJSONObject(i).getString("group")){
-                result++
+                result.add(results.getJSONObject(i).getString("id"))
             }
         }
-        return result
+        return result.size
     }
 
     fun resetResultsFile(){
