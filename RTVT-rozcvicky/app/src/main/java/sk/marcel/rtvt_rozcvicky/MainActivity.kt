@@ -1,4 +1,4 @@
-package sk.marcel.rtvtAttendance
+package sk.marcel.rtvt_rozcvicky
 
 import android.content.DialogInterface
 import android.content.Intent
