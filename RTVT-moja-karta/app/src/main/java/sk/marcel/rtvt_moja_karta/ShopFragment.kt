@@ -31,28 +31,5 @@ class ShopFragment : Fragment(), NfcFragment{
         return view
     }
 
-    override fun doNfcIntent(intent: Intent) {
-        val res = NFC.removeMoney(intent, adapter.sum)
-        if(res){
-            alertDialog?.cancel()
-            alertDialog = SweetAlertDialog(context, SweetAlertDialog.SUCCESS_TYPE)
-                .setTitleText("Success!")
-                .setContentText("Items bought")
-            alertDialog?.show()
-
-            val mp: MediaPlayer = MediaPlayer.create(context, R.raw.ack)
-            mp.start()
-            mp.setOnCompletionListener { mp.release() }
-
-        } else {
-            alertDialog?.cancel()
-            alertDialog = SweetAlertDialog(context, SweetAlertDialog.ERROR_TYPE)
-                .setTitleText("Nope")
-                .setContentText("Something failed (not enough money on card?)")
-            alertDialog?.show()
-            val mp: MediaPlayer = MediaPlayer.create(context, R.raw.error)
-            mp.start()
-            mp.setOnCompletionListener { mp.release() }
-        }
-    }
+    override fun doNfcIntent(intent: Intent) { }
 }
