@@ -2,13 +2,24 @@ package sk.marcel.rtvt_payment
 
 import android.content.Intent
 import android.nfc.NfcAdapter
+import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.*
+import android.widget.CheckBox
+import android.widget.LinearLayout
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
+
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -18,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var viewPagerAdapter: ViewPagerAdapter
     lateinit var viewPager: ViewPager
+    var progressBar: ProgressBar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +44,9 @@ class MainActivity : AppCompatActivity() {
 
         val tabLayout = findViewById<View>(R.id.tab) as TabLayout
         tabLayout.setupWithViewPager(viewPager)
+
+        Downloaders.ShopDownloadTask().execute("https://people.ksp.sk/~marcel/shop.json")
+        Downloaders.PeopleDownloadTask().execute("https://people.ksp.sk/~marcel/people.json")
     }
 
     fun checkAll(v:View){
@@ -66,4 +81,5 @@ class MainActivity : AppCompatActivity() {
             NFC.disableNFCInForeground(it,this)
         }
     }
+
 }

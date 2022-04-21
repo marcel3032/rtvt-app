@@ -9,12 +9,30 @@ import java.util.*
 
 class JsonsHelpers(private var activity: MainActivity) {
     var resultsFile: File = File(activity.filesDir.absolutePath, "attendance.json")
+    private var shopFile: File = File(activity.filesDir.absolutePath, "shop.json")
+    private var peopleFile: File = File(activity.filesDir.absolutePath, "people.json")
 
     init {
         if(!resultsFile.exists()) {
             resultsFile.createNewFile()
             resetResultsFile()
         }
+        if(!shopFile.exists()) {
+            shopFile.createNewFile()
+            shopFile.writeText("[]")
+        }
+        if(!peopleFile.exists()) {
+            peopleFile.createNewFile()
+            peopleFile.writeText("[]")
+        }
+    }
+
+    fun writeShop(shopData: String){
+        shopFile.writeText(shopData)
+    }
+
+    fun writePeople(peopleData: String){
+        peopleFile.writeText(peopleData)
     }
 
     fun writeResults(person: JSONObject, money: Long?){
@@ -101,7 +119,7 @@ class JsonsHelpers(private var activity: MainActivity) {
     }
 
     fun getPeopleJson(): JSONArray {
-        BufferedReader(activity.assets.open("people.json").reader()).use { reader ->
+        BufferedReader(peopleFile.reader()).use { reader ->
             return JSONArray(reader.readText())
         }
     }

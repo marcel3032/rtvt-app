@@ -23,4 +23,33 @@ object Constants {
         Pair("azure", "#628bc4"),
         Pair("purple", "#8d0aff")
     )
+
+    val colorsMixing = mapOf(
+        Pair(arrayListOf("red").sorted(), "red"),
+        Pair(arrayListOf("red", "red").sorted(), "red"),
+        Pair(arrayListOf("red", "red", "red").sorted(), "red"),
+
+        Pair(arrayListOf("green").sorted(), "green"),
+        Pair(arrayListOf("green", "green").sorted(), "green"),
+        Pair(arrayListOf("green", "green", "green").sorted(), "green"),
+
+        Pair(arrayListOf("blue").sorted(), "blue"),
+        Pair(arrayListOf("blue", "blue").sorted(), "blue"),
+        Pair(arrayListOf("blue", "blue", "blue").sorted(), "blue"),
+
+        Pair(arrayListOf("red", "green").sorted(), "yellow"),
+        Pair(arrayListOf("green", "blue").sorted(), "cyan"),
+        Pair(arrayListOf("blue", "red").sorted(), "magenta"),
+
+        Pair(arrayListOf("red", "red", "green").sorted(), "orange"),
+        Pair(arrayListOf("red", "green", "blue").sorted(), "white"),
+        Pair(arrayListOf("red", "red", "blue").sorted(), "brown"),
+
+        Pair(arrayListOf("green", "red", "green").sorted(), "light green"),
+        Pair(arrayListOf("green", "green", "blue").sorted(), "dark green"),
+        Pair(arrayListOf("blue", "green", "blue").sorted(), "azure"),
+
+        Pair(arrayListOf("blue", "red", "blue").sorted(), "purple")
+
+    )
 }

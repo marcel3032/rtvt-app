@@ -1,6 +1,5 @@
 package sk.marcel.rtvt
 
-import android.view.View
 import org.json.JSONArray
 import java.io.BufferedReader
 import java.io.File

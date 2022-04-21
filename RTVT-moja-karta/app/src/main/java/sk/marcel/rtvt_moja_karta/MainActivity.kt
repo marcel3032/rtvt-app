@@ -32,6 +32,9 @@ class MainActivity : AppCompatActivity() {
 
         val tabLayout = findViewById<View>(R.id.tab) as TabLayout
         tabLayout.setupWithViewPager(viewPager)
+
+        Downloaders.ShopDownloadTask().execute("https://people.ksp.sk/~marcel/shop.json")
+        Downloaders.PeopleDownloadTask().execute("https://people.ksp.sk/~marcel/people.json")
     }
 
     fun checkAll(v:View){

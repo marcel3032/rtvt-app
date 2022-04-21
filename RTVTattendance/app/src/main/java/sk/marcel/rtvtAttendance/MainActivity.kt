@@ -17,7 +17,9 @@ import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var jsonsHelpers : JsonsHelpers
+    companion object {
+        lateinit var jsonsHelpers: JsonsHelpers
+    }
     private var mNfcAdapter: NfcAdapter? = null
     var alertDialog: SweetAlertDialog? = null
 
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
         setPeopleList()
+        Downloaders.PeopleDownloadTask().execute("https://people.ksp.sk/~marcel/people.json")
     }
 
     override fun onResume() {

@@ -15,8 +15,18 @@ import java.nio.ByteBuffer
 object NFC {
     private const val teamSector = 8
     private const val pictureSector = 9
+    private const val colorsSector = 10
     private const val sectorSize = 16
     private const val pictureOffset = 473
+
+    private const val red = "red"
+    private const val redIndex = 0
+    private const val green = "green"
+    private const val greenIndex = 1
+    private const val blue = "blue"
+    private const val blueIndex = 2
+
+    private const val maxColorCount = 3
 
     private val key: ByteArray = MifareClassic.KEY_DEFAULT
 
@@ -63,19 +73,26 @@ object NFC {
         return true
     }
 
-    fun read(intent: Intent):String? {
+    fun read(intent: Intent):List<String>? {
         // TODO reading based on Krtko's format
         if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
             val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
-            val team: String
-            val picture: Int
+            val colors = ArrayList<String>()
             try {
                 mfc.connect()
                 val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(teamSector), som)
                 if (auth) {
-                    team = String(mfc.readBlock(teamSector))
-                    picture = mfc.readBlock(pictureSector)[0].toInt()
-                    return "$team $picture"
+                    val bytes = mfc.readBlock(colorsSector)
+                    for(i in 0 until bytes[redIndex])
+                        colors.add(red)
+                    for(i in 0 until bytes[greenIndex])
+                        colors.add(green)
+                    for(i in 0 until bytes[blueIndex])
+                        colors.add(blue)
+                    if(colors.size > maxColorCount)
+                        return null
+                    colors.sort()
+                    return colors
                 } else {
                     Log.e("rtvt", "Cannot authentificate")
                 }

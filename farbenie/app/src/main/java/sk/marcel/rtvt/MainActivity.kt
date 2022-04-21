@@ -168,8 +168,13 @@ class MainActivity : AppCompatActivity() {
             if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
                 if(reading) {
                     val res = NFC.read(intent)
-                    if(res!=null)
-                        Toast.makeText(this, "on card: $res", Toast.LENGTH_SHORT).show()
+                    if(res!=null) {
+                        val resultColor = Constants.colorsMixing[res]
+                        if(resultColor!=null) {
+                            Toast.makeText(this,"on card: $res, result: $resultColor", Toast.LENGTH_SHORT).show()
+                            addColor(resultColor)
+                        }
+                    }
                     else
                         Toast.makeText(this, "reading failed", Toast.LENGTH_SHORT).show()
                 } else {

@@ -12,9 +12,8 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?) :
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> transferMoneyFragment
-            1 -> shopFragment
-            2 -> cardInfoFragment
+            0 -> shopFragment
+            1 -> cardInfoFragment
             else -> AddMoneyFragment.newInstance()
         }
     }
@@ -25,14 +24,13 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?) :
 
     override fun getPageTitle(position: Int): CharSequence {
         return when (position) {
-            0 -> TransferMoneyFragment.TITLE
-            1 -> ShopFragment.TITLE
-            2 -> CardInfoFragment.TITLE
+            0 -> ShopFragment.TITLE
+            1 -> CardInfoFragment.TITLE
             else -> ""
         }
     }
 
     companion object {
-        private const val TAB_COUNT = 3
+        private const val TAB_COUNT = 2
     }
 }

@@ -23,10 +23,10 @@ class PeopleAdapter(private val mContext: MainActivity, private val resourceLayo
         if (p != null) {
             label.text = p.name
             label.textSize = 25f
-            if(mContext.jsonsHelpers.isCheckedOut(p.id)) {
+            if(MainActivity.jsonsHelpers.isCheckedOut(p.id)) {
                 label.checkMarkDrawable = AppCompatResources.getDrawable(mContext, R.drawable.ic_check)
                 label.checkMarkTintList = ColorStateList.valueOf(mContext.resources.getColor(R.color.blue))
-            }else if(mContext.jsonsHelpers.isCheckedIn(p.id) != null) {
+            }else if(MainActivity.jsonsHelpers.isCheckedIn(p.id) != null) {
                 label.checkMarkDrawable = AppCompatResources.getDrawable(mContext, R.drawable.ic_check)
                 label.checkMarkTintList = ColorStateList.valueOf(mContext.resources.getColor(R.color.green))
             }else {

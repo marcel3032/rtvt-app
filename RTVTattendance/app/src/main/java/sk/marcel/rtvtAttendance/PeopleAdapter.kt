@@ -22,7 +22,7 @@ class PeopleAdapter(private val mContext: MainActivity, private val resourceLayo
         if (p != null) {
             label.text = p.name
             label.textSize = 25f
-            if(mContext.jsonsHelpers.isNotIdInResults(p.id))
+            if(MainActivity.jsonsHelpers.isNotIdInResults(p.id))
                 label.checkMarkDrawable = AppCompatResources.getDrawable(mContext, R.drawable.ic_cross)
             else
                 label.checkMarkDrawable = AppCompatResources.getDrawable(mContext, R.drawable.ic_check)

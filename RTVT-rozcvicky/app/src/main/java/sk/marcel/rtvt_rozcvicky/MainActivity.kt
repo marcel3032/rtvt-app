@@ -22,7 +22,9 @@ import kotlin.math.sqrt
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var jsonsHelpers : JsonsHelpers
+    companion object {
+        lateinit var jsonsHelpers : JsonsHelpers
+    }
     private var mNfcAdapter: NfcAdapter? = null
     var alertDialog: SweetAlertDialog? = null
 
@@ -34,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
         setPeopleList()
+
+        Downloaders.ShopDownloadTask().execute("https://people.ksp.sk/~marcel/shop.json")
+        Downloaders.PeopleDownloadTask().execute("https://people.ksp.sk/~marcel/people.json")
     }
 
     override fun onResume() {

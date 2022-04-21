@@ -8,59 +8,26 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class JsonsHelpers(private var activity: MainActivity) {
-    var resultsFile: File = File(activity.filesDir.absolutePath, "attendance.json")
+    private var shopFile: File = File(activity.filesDir.absolutePath, "shop.json")
+    private var peopleFile: File = File(activity.filesDir.absolutePath, "people.json")
 
     init {
-        if(!resultsFile.exists()) {
-            resultsFile.createNewFile()
-            resetResultsFile()
+        if(!shopFile.exists()) {
+            shopFile.createNewFile()
+            shopFile.writeText("[]")
+        }
+        if(!peopleFile.exists()) {
+            peopleFile.createNewFile()
+            peopleFile.writeText("[]")
         }
     }
 
-    fun writeResults(person: JSONObject){
-        val resultsJson = getResultsJson()
-        person.put("time", Calendar.getInstance().time.toGMTString())
-        resultsJson.getJSONArray(getResultsJson().length()-1).put(person)
-        resultsFile.writeText(resultsJson.toString())
+    fun writeShop(shopData: String){
+        shopFile.writeText(shopData)
     }
 
-    fun addNewActivity(){
-        val resultsJson = getResultsJson()
-        resultsJson.put(JSONArray())
-        resultsFile.writeText(resultsJson.toString())
-    }
-
-    fun getLastResultsJson(): JSONArray {
-        BufferedReader(resultsFile.reader()).use { reader ->
-            val res = JSONArray(reader.readText())
-            return res.getJSONArray(res.length()-1)
-        }
-    }
-
-    fun getResultsJson(): JSONArray {
-        BufferedReader(resultsFile.reader()).use { reader ->
-            return JSONArray(reader.readText())
-        }
-    }
-
-    fun isNotIdInResults(id:String):Boolean{
-        val results = getLastResultsJson()
-        for(i in 0 until results.length()){
-            if(id == results.getJSONObject(i).getString("id")){
-                return false
-            }
-        }
-        return true
-    }
-
-    fun getPersonById(id:String):JSONObject?{
-        val results = getPeopleJson()
-        for(i in 0 until results.length()){
-            if(id == results.getJSONObject(i).getString("id")){
-                return results.getJSONObject(i)
-            }
-        }
-        return null
+    fun writePeople(peopleData: String){
+        peopleFile.writeText(peopleData)
     }
 
     fun getPersonByIdObject(id:String):Person?{
@@ -73,16 +40,8 @@ class JsonsHelpers(private var activity: MainActivity) {
         return null
     }
 
-    fun resetResultsFile(){
-        resultsFile.writeText("[[]]")
-    }
-
-    fun addPerson(id: String){
-        getPersonById(id)?.let { writeResults(it) }
-    }
-
     fun getPeopleJson(): JSONArray {
-        BufferedReader(activity.assets.open("people.json").reader()).use { reader ->
+        BufferedReader(peopleFile.reader()).use { reader ->
             return JSONArray(reader.readText())
         }
     }
@@ -97,7 +56,7 @@ class JsonsHelpers(private var activity: MainActivity) {
     }
 
     fun getItemsJson(): JSONArray {
-        BufferedReader(activity.assets.open("shop.json").reader()).use { reader ->
+        BufferedReader(shopFile.reader()).use { reader ->
             return JSONArray(reader.readText())
         }
     }
