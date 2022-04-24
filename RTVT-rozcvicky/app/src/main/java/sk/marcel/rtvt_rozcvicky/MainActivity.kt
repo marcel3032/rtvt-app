@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun shareFile(file: File) {
         val sharingIntent = Intent(Intent.ACTION_SEND)
-        val screenshotUri = FileProvider.getUriForFile(this,"sk.marcel.rtvtAttendance",file)
+        val screenshotUri = FileProvider.getUriForFile(this,"sk.marcel.rtvt_rozcvicky",file)
         sharingIntent.type = "*/*"
         sharingIntent.putExtra(Intent.EXTRA_STREAM, screenshotUri)
         startActivity(Intent.createChooser(sharingIntent, "Share image using"))

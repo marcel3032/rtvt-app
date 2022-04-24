@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import cn.pedant.SweetAlert.SweetAlertDialog
 
-
 class CardInfoFragment : Fragment(), NfcFragment{
     companion object {
         const val TITLE = "Card Info"
@@ -30,7 +29,7 @@ class CardInfoFragment : Fragment(), NfcFragment{
             val person = MainActivity.jsonsHelpers.getPersonByIdObject(res.first) ?: return
             view?.findViewById<TextView>(R.id.name)!!.text = person.name
             view?.findViewById<TextView>(R.id.group)!!.text = person.group
-            view?.findViewById<TextView>(R.id.money)!!.text = "${res.second} peňazí"
+            view?.findViewById<TextView>(R.id.money)!!.text = String.format("%,d peňazí", res.second)
 
             val mp: MediaPlayer = MediaPlayer.create(context, R.raw.ack)
             mp.start()
