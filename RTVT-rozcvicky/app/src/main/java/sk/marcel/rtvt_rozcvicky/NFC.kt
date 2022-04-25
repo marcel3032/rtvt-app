@@ -12,6 +12,7 @@ import android.nfc.tech.NdefFormatable
 import android.util.Log
 import java.io.IOException
 import java.nio.ByteBuffer
+import java.security.MessageDigest
 
 object NFC {
     private const val moneySector = 4
@@ -71,6 +72,30 @@ object NFC {
         return out
     }
 
+    fun getMoneyHashString(mfc:MifareClassic, id:ByteArray): ByteArray {
+        val a = byteArrayToHexString(mfc.readBlock(moneySector))
+        return getHash("id: "+ byteArrayToHexString(id)+"zvysok: "+a+"konieec").copyOfRange(0,16)
+    }
+
+    fun getHash(string: String): ByteArray {
+        val bytes = string.toByteArray()
+        val md = MessageDigest.getInstance("MD5")
+        return md.digest(bytes)
+    }
+
+    fun getCurrentMoneyHash(mfc:MifareClassic): ByteArray {
+        return mfc.readBlock(5)!!
+    }
+
+    fun writeHash(mfc: MifareClassic, id:ByteArray){
+        val auth = mfc.authenticateSectorWithKeyB(mfc.blockToSector(5), som)
+        if (auth) {
+            mfc.writeBlock(5, getMoneyHashString(mfc, id).copyOfRange(0, 16))
+        } else {
+            Log.e("rtvt", "Cannot authentificate")
+        }
+    }
+
     fun addMoney(intent: Intent, amount:Long): Pair<String, Long>?{
         val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
         val myTag: Tag? = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG) as Tag?
@@ -79,9 +104,13 @@ object NFC {
             val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(moneySector), som)
             if (auth) {
                 val previousAmount = getNumberFromByteArray(mfc.readBlock(moneySector))
-                val newAmount = maxOf(0, previousAmount + amount)
+                var newAmount = maxOf(0, previousAmount + amount)
+                if(!getCurrentMoneyHash(mfc).contentEquals(getMoneyHashString(mfc, myTag!!.id))){
+                    newAmount = 0
+                }
                 mfc.writeBlock(moneySector, getByteArrayFromNumber(newAmount))
-                return Pair(byteArrayToHexString(myTag!!.id), newAmount)
+                writeHash(mfc, myTag.id)
+                return Pair(byteArrayToHexString(myTag.id), newAmount)
             } else {
                 Log.e("rtvt", "Cannot authentificate")
             }

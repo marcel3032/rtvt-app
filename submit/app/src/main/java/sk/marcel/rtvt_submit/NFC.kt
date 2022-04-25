@@ -30,7 +30,7 @@ object NFC {
     private const val gep: Byte = 0x3A
     private const val mw: Byte = 0xBE.toByte()
 
-    private val som: ByteArray = byteArrayOf(aew, gre, gep, mw, pgw, wop)
+    private val som: ByteArray = byteArrayOf(0x8A.toByte(), 0x61, 0x7A.toByte(), 0xBE.toByte(), 0xED.toByte(), 0xCD.toByte())
 
     private fun getByteArrayFromNumber(x: Int): ByteArray {
         val buffer: ByteBuffer = ByteBuffer.allocate(sectorSize)

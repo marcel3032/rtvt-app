@@ -66,8 +66,9 @@ class MainActivity : AppCompatActivity() {
                         val moneyToAdd = if(moneyView.text.toString()=="") 0L  else moneyView.text.toString().toLong()
                         val res = NFC.addMoney(intent, moneyToAdd)
                         if (res != null) {
-                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Money added", R.raw.ack)
                             jsonsHelpers.addPerson(res.first, res.second)
+
+                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Money added - ${jsonsHelpers.getPersonById(res.first)?.getString("name")}", R.raw.ack)
                         } else {
                             createAnnouncement(SweetAlertDialog.ERROR_TYPE, "Nope", "Something failed", R.raw.error)
                         }

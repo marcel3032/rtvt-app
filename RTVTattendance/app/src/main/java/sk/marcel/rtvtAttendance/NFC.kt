@@ -10,8 +10,11 @@ import android.nfc.tech.MifareClassic
 import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
 import android.util.Log
+import android.widget.Toast
 import java.io.IOException
 import java.nio.ByteBuffer
+import java.security.MessageDigest
+import java.util.*
 
 object NFC {
     private const val moneySector = 4
@@ -44,11 +47,56 @@ object NFC {
         return buffer.long
     }
 
+    fun setCard(mfc:MifareClassic, id:ByteArray){
+        try {
+            mfc.connect()
+            var auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(11), som)
+            if (auth) {
+                mfc.writeBlock(11, byteArrayOf(0x8A.toByte(), 0x61, 0x7A.toByte(), 0xBE.toByte(), 0xED.toByte(), 0xCD.toByte(), 0xFF.toByte(), 0x07, 0x80.toByte(), 0x69, 0x8A.toByte(), 0x61, 0x7A.toByte(), 0xBE.toByte(), 0xED.toByte(), 0xCD.toByte()))
+            } else {
+                Log.e("rtvt", "Cannot authentificate")
+            }
+            mfc.authenticateSectorWithKeyB(mfc.blockToSector(moneySector), som)
+            mfc.writeBlock(moneySector, getByteArrayFromNumber(MainActivity.jsonsHelpers.getPersonById(byteArrayToHexString(id))!!.getLong("money")))
+            writeHash(mfc, id)
+            mfc.close()
+        } catch (e: IOException) {
+            Log.e("rtvt", e.localizedMessage?:"")
+        }
+    }
+
+    fun getMoneyHashString(mfc:MifareClassic, id:ByteArray): ByteArray {
+        val a = byteArrayToHexString(mfc.readBlock(moneySector))
+        return getHash("id: "+ byteArrayToHexString(id)+"zvysok: "+a+"konieec").copyOfRange(0,16)
+    }
+
+    fun getHash(string: String): ByteArray {
+        val bytes = string.toByteArray()
+        val md = MessageDigest.getInstance("MD5")
+        return md.digest(bytes)
+    }
+
+    fun getCurrentMoneyHash(mfc:MifareClassic): ByteArray {
+        return mfc.readBlock(5)!!
+    }
+
+    fun writeHash(mfc: MifareClassic, id:ByteArray){
+        val auth = mfc.authenticateSectorWithKeyB(mfc.blockToSector(5), som)
+        if (auth) {
+            mfc.writeBlock(5, getMoneyHashString(mfc, id).copyOfRange(0, 16))
+        } else {
+            Log.e("rtvt", "Cannot authentificate")
+        }
+    }
+
     fun readId(intent: Intent):String? {
         if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TAG_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
             val myTag: Tag? = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG) as Tag?
+            val mfc = MifareClassic.get(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG))
             if (myTag != null) {
-                return byteArrayToHexString(myTag.id)
+                val res = byteArrayToHexString(myTag.id)
+                //setCard(mfc, myTag.id)
+                return res
             }
         }
         return null
@@ -79,9 +127,13 @@ object NFC {
             val auth: Boolean = mfc.authenticateSectorWithKeyB(mfc.blockToSector(moneySector), som)
             if (auth) {
                 val previousAmount = getNumberFromByteArray(mfc.readBlock(moneySector))
-                val newAmount = maxOf(0, previousAmount + amount)
+                var newAmount = maxOf(0, previousAmount + amount)
+                if(!getCurrentMoneyHash(mfc).contentEquals(getMoneyHashString(mfc, myTag!!.id))){
+                    newAmount = 0
+                }
                 mfc.writeBlock(moneySector, getByteArrayFromNumber(newAmount))
-                return Pair(byteArrayToHexString(myTag!!.id), newAmount)
+                writeHash(mfc, myTag.id)
+                return Pair(byteArrayToHexString(myTag.id), newAmount)
             } else {
                 Log.e("rtvt", "Cannot authentificate")
             }

@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                         val moneyToAdd = computeMoneyToAdd(moneyPerMinute, jsonsHelpers.isCheckedIn(id)!!)
                         val res = NFC.addMoney(intent, moneyToAdd)
                         if (res != null) {
-                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Check out, $moneyToAdd money added", R.raw.ack)
+                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Check out, $moneyToAdd money added - ${jsonsHelpers.getPersonById(res.first)?.getString("name")}", R.raw.ack)
                             jsonsHelpers.addPerson(res.first, res.second)
                         } else {
                             createAnnouncement(SweetAlertDialog.ERROR_TYPE, "Nope", "Something failed", R.raw.error)
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                         createAnnouncement(SweetAlertDialog.WARNING_TYPE, "Nope", "Already scanned", R.raw.error)
                         val res = NFC.addMoney(intent, 0L)
                         if (res != null) {
-                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Checked in", R.raw.ack)
+                            createAnnouncement(SweetAlertDialog.SUCCESS_TYPE, "Success!", "Checked in - ${jsonsHelpers.getPersonById(res.first)?.getString("name")}", R.raw.ack)
                             jsonsHelpers.addPerson(res.first, res.second)
                         } else {
                             createAnnouncement(SweetAlertDialog.ERROR_TYPE, "Nope", "Something failed", R.raw.error)
